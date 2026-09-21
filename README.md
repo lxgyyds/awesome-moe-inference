@@ -36,12 +36,18 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [Arxiv'22] [A Review of Sparse Expert Models in Deep Learning](https://arxiv.org/abs/2209.01667)
 
+[Arxiv'25.3] [A Comprehensive Survey of Mixture-of-Experts: Algorithms, Theory, and Applications](https://arxiv.org/abs/2503.07137)
+
+[Arxiv'25.7] [Mixture of Experts in Large Language Models](https://arxiv.org/abs/2507.11181)
+
+[JEIT'26] [混合专家大语言模型的系统与架构优化技术综述](https://jeit.ac.cn/cn/article/doi/10.11999/JEIT250407)
+
 ## SOTA Open Source MoE LLMs
 
 |                                                             Reference                                                            | Para. | Experts | \#L | \#H | $d_{model}$ | $d_{ffn}$ | $d_{expert}$ | Affiliation |   Time  |
 |:--------------------------------------------------------------------------------------------------------------------------------:|:-----:|:-------:|:---:|:---:|:-----------:|:---------:|:------------:|:-----------:|:-------:|
 |                     [NLLB](https://huggingface.co/facebook/nllb-moe-54b)  <br />[[Tech Report](https://arxiv.org/abs/2207.04672)]                  |  54B  |  2/64/0 |  24 |  16 |     1024    |    8192   |     8192     |   FaceBook  | 2022.07 |
-|                [Qwen2-57B-A14B](https://huggingface.co/Qwen/Qwen2-57B-A14B) <br /> [[Tech Report](https://arxiv.org/abs/2407.10671)]              | 57.4B |  8/64/0 |  28 |  28 |     3584    |   18944   |     2560     |   Alibaba   | 2023.05 |
+|                [Qwen2-57B-A14B](https://huggingface.co/Qwen/Qwen2-57B-A14B) <br /> [[Tech Report](https://arxiv.org/abs/2407.10671)]              | 57.4B |  8/64/0 |  28 |  28 |     3584    |   18944   |     2560     |   Alibaba   | 2024.06 |
 |            [Mixtral-8x7B](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1) <br /> [[Tech Report](https://arxiv.org/abs/2401.04088)]            | 46.7B |  2/8/0  |  32 |  32 |     4096    |   14336   |     14336    |  Mistral AI | 2023.12 |
 |                 [OpenMoE](https://huggingface.co/OrionZheng/openmoe-base)<br />   [[Tech Report](https://arxiv.org/abs/2402.01739)]                 |  34B  |  2/16/0 |  12 |  12 |     768     |    2048   |     2048     |  NUS et al. | 2023.12 |
 |        [DeepSeekMoE](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base) <br />   [[Tech Report](https://arxiv.org/abs/2401.06066)]        | 16.4B |  6/64/2 |  28 |  16 |     2048    |   10944   |     1408     | DeepSeek-AI | 2024.01 |
@@ -56,8 +62,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 |               [Skywork-MoE](https://huggingface.co/Skywork/Skywork-MoE-Base)  <br />  [[Tech Report](https://arxiv.org/abs/2406.06563)]               |  13B  |  2/16/0 |  52 |  36 |     4608    |   12288   |     12288    | Kunlun Tech | 2024.05 |
 |                     [Yuan2](https://huggingface.co/IEITYuan/Yuan2-M32-hf) <br />  [[Tech Report](https://arxiv.org/abs/2405.17976)]                      |  40B  |  2/32/0 |  24 |  16 |     2048    |    8192   |     8192     |  IEIT-Yuan  | 2024.05 |
 |                   [LLaMA-MoE](https://github.com/pjlab-sys4nlp/llama-moe) <br />  [[Tech Report](https://arxiv.org/abs/2406.16554)]                       |  6.7B |  2/8/0  |  32 |  32 |     4096    |   11008   |     11008    |  Zhu et al. | 2024.06 |
-|               [OLMoE](https://huggingface.co/allenai/OLMoE-1B-7B-0924)<br />  [[Tech Report](https://arxiv.org/abs/2409.02060)]                   | 6.92B |  8/64/0 |  16 |  16 |     2048    |    1024   |     1024     |   AllenAI   | 2024.07 |
-|                [Phi-3](https://huggingface.co/microsoft/Phi-3.5-MoE-instruct) <br /> [[Tech Report](https://arxiv.org/abs/2404.14219)]                   | 41.9B |  2/16/0 |  32 |  32 |     4096    |    6400   |     6400     |  MicroSoft  | 2024.08 |
+|               [OLMoE](https://huggingface.co/allenai/OLMoE-1B-7B-0924)<br />  [[Tech Report](https://arxiv.org/abs/2409.02060)]                   | 6.92B |  8/64/0 |  16 |  16 |     2048    |    1024   |     1024     |   AllenAI   | 2024.09 |
+|                [Phi-3.5-MoE](https://huggingface.co/microsoft/Phi-3.5-MoE-instruct) <br /> [[Tech Report](https://arxiv.org/abs/2404.14219)]                   | 41.9B |  2/16/0 |  32 |  32 |     4096    |    6400   |     6400     |  MicroSoft  | 2024.08 |
 |                     [GRIN-MoE](https://huggingface.co/microsoft/GRIN-MoE) <br /> [[Tech Report](https://arxiv.org/abs/2409.12136)]                        | 41.9B |  2/16/0 |  32 |  32 |     4096    |    6400   |     6400     |  MicroSoft  | 2024.09 |
 | [Hunyuan-Large](https://huggingface.co/tencent/Tencent-Hunyuan-Large/tree/main/Hunyuan-A52B-Pretrain)<br /> [[Tech Report](https://arxiv.org/abs/2411.02265)] |  389B |  1/16/1 |  64 |  80 |     6400    |   18304   |     18304    |   Tencent   | 2024.11 |
 | [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3-Base) <br /> [[Tech Report](https://arxiv.org/pdf/2412.19437)] | 671B | 8/256/1 | 61 | 128 | 7168 | 18432 | 2048 | DeepSeek-AI   | 2024.12 |
@@ -71,6 +77,20 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 | [GPT-oss<br />](https://huggingface.co/openai/gpt-oss-120b) [[Tech Report](https://arxiv.org/abs/2508.10925)] | 120B | 4/128/0 | 36 | 64 | 2880 | 11520 | 2880 | OpenAI | 2025.8 |
 | [GLM-4.5](https://huggingface.co/zai-org/GLM-4.5) <br />[[Tech Report](https://arxiv.org/abs/2508.06471)] | 355B | 8/160/1 | 92 | 96 | 5120 | 12288 | 1536 | Z.ai | 2025.8 |
 | [LongCat](https://huggingface.co/meituan-longcat/LongCat-Flash-Chat) <br /> [[Tech Report](https://arxiv.org/abs/2509.01322)] | 560B | 12/512/0 | 28 | 64 | 6144 | 12288 | 2048 | Meituan | 2025.9 |
+| [DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2) <br />[[Tech Report](https://arxiv.org/abs/2512.02556)] | 671B | 8/256/1 | 61 | 128 | 7168 | 18432 | 2048 | DeepSeek-AI | 2025.12 |
+| [GLM-4.7](https://huggingface.co/zai-org/GLM-4.7) <br />[[Tech Report](https://z.ai/blog/glm-4.7)] | 358B | 8/160/1 | 92 | 96 | 5120 | 12288 | 1536 | Z.ai | 2025.12 |
+| [Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B) <br />[[Tech Report](https://qwen.ai/blog?id=qwen3.5)] | 397B | 10/512/1 | 60 | 64 | 4096 | UNK | 1024 | Alibaba | 2026.2 |
+| [GLM-5](https://huggingface.co/zai-org/GLM-5) <br />[[Tech Report](https://arxiv.org/abs/2602.15763)] | 744B | 8/256/1 | 78 | 64 | 6144 | 12288 | 2048 | Z.ai | 2026.2 |
+| [DeepSeek-V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash) <br />[[Tech Report](https://arxiv.org/abs/2606.19348)] | 284B | 6/256/1 | 43 | 64 | 4096 | UNK | 2048 | DeepSeek-AI | 2026.4 |
+| [DeepSeek-V4-Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) <br />[[Tech Report](https://arxiv.org/abs/2606.19348)] | 1.6T | 6/384/1 | 61 | 128 | 7168 | UNK | 3072 | DeepSeek-AI | 2026.4 |
+| [Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6) <br />[[Tech Report](https://kimi-k2.org/blog/24-kimi-k2-6-release)] | 1T | 8/384/1 | 61 | 64 | 7168 | 18432 | 2048 | MoonshotAI | 2026.4 |
+| [MiniMax-M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) <br />[[Tech Report](https://www.minimax.io/blog/minimax-m3)] | 428B | 4/128/0 | 60 | 64 | UNK | UNK | UNK | MiniMax | 2026.6 |
+| [GLM-5.3](https://huggingface.co/zai-org/GLM-5.3) <br />[[Config](https://huggingface.co/zai-org/GLM-5.3/blob/main/config.json)] | ~753B | 8/256/1 | 78 | 64 | 6144 | 12288 | 2048 | Z.ai | 2026.08 |
+| [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) <br />[[Tech Report](https://arxiv.org/abs/2608.30320)] [[Config](https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/config.json)] | 125B + 51B + 4B | 10/512/1 | 48 | 24 | 2560 | N/A | 640 | Alibaba | 2026.08 |
+| [DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) <br />[[Tech Report](https://arxiv.org/abs/2609.19969)] | 552B | UNK | 40 | UNK | UNK | UNK | UNK | DeepSeek-AI | 2026.9 |
+
+Model-specific counting notes: Qwen3.8-Flash-Next has 125B language-model parameters, 51B n-gram embeddings and 4B MTP parameters; 6B are activated per token according to its model card. GLM-5.3's approximate 753B count follows the publisher's Hugging Face model listing; it is not an independently recomputed backbone count. DeepSeek-V4.1-Flash's 552B figure is the backbone count, not a claim that every auxiliary parameter is included. For Qwen3.8-Flash-Next, `#H` describes QSA layers, and `d_ffn` is N/A for a separate dense FFN.
+
 
 
 ## Model-Level Optimizations
@@ -105,6 +125,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [Arxiv'24.2] [MoELoRA: Contrastive Learning Guided Mixture of Experts on Parameter-Efficient Fine-Tuning for Large Language Models](https://arxiv.org/abs/2402.12851)
 
+[Arxiv'26.1] [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](https://arxiv.org/abs/2601.18089) [[Blog](https://research.nvidia.com/labs/nemotron/LatentMoE/)]
+
 
 
 [Arxiv'23] [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](https://arxiv.org/abs/2308.12066) [[Code](https://github.com/ranggihwang/Pregated_MoE)]
@@ -120,6 +142,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 ### Model Compression
 
 #### Pruning
+
+[Arxiv'26.6] [Less is MoE: Trimming Experts in Domain-Specialist Language Models](https://arxiv.org/abs/2606.05538) [Fisher-MoE; EMNLP 2026, to appear]
 
 [Arxiv'24.10] [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](https://arxiv.org/abs/2410.12013)
 
@@ -154,6 +178,14 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [SENSYS '24] [LiteMoE: Customizing On-device LLM Serving via Proxy Submodel Tuning](https://dl.acm.org/doi/abs/10.1145/3666025.3699355)
 
+[Arxiv'25.6] [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](https://arxiv.org/abs/2506.23266) [Pruning/Merge]
+
+[Arxiv'26.5] [Pruning and Distilling Mixture-of-Experts into Dense Language Models](https://arxiv.org/abs/2605.28207) [Sparse to Dense]
+
+[OpenReview'26] [RaGEP: Rank-aware Geometric Expert Pruning for Mixture-of-Experts Language Models](https://openreview.net/forum?id=SGIQXw1OGu)
+
+[Arxiv'26.9] [Higher-order pruning of experts in mixture-of-experts language models](https://arxiv.org/abs/2609.18916)
+
 
 #### Quantization
 [Arxiv'24.10] [MC-MoE: Mixture Compressor for Mixture-of-Experts LLMs Gains More](https://arxiv.org/abs/2410.06270) [[Code](https://github.com/Aaronhuang-778/MC-MoE)] 
@@ -166,9 +198,9 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 
 
-[Arxiv'24.9] [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](https://arxiv.org/abs/2407.14417)
+[Arxiv'24.7] [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](https://arxiv.org/abs/2407.14417)
 
-[Arxiv'24.6] [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](https://arxiv.org/abs/2406.08155) [[Code](https://github.com/UNITES-Lab/moe-quantization)]
+[Arxiv'24.6] [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](https://arxiv.org/abs/2406.08155) [[Code](https://github.com/UNITES-Lab/moe-quantization)]
 
 
 [INTERSPEECH'23] [Compressed MoE ASR Model Based on Knowledge Distillation and Quantization](https://www.isca-archive.org/interspeech_2023/yuan23c_interspeech.pdf)
@@ -178,27 +210,33 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [EMNLP'22] [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](https://arxiv.org/abs/2211.10017)
 
-[arXiv'24] [MoPEQ: Mixture of Mixed Precision Quantized Experts](https://arxiv.org/abs/2509.02512)
-
-[arXiv'25] [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](https://arxiv.org/abs/2406.08155)
+[arXiv'25.9] [MoPEQ: Mixture of Mixed Precision Quantized Experts](https://arxiv.org/abs/2509.02512)
 
 [Findings of ACL'25] [Automated Fine-Grained Mixture-of-Experts Quantization](https://aclanthology.org/2025.findings-acl.1386/)
 
 [arXiv'25] [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](https://arxiv.org/abs/2505.05799)
 
-[ICLR'26] [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](https://dl.acm.org/doi/10.1145/3637528.3671873)
+[ICLR'26] [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](https://arxiv.org/abs/2604.06515)
 
-[arXiv'25] [MoQa: Rethinking MoE Quantization with Multi-stage Data-model Distribution Awareness](https://arxiv.org/abs/2503.21135v1)
-
-[DATE'26] [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](https://arxiv.org/abs/2503.21135)
+[DATE'26] [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](https://arxiv.org/abs/2503.21135) [Earlier version: MoQa]
 
 [arXiv'25] [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling](https://arxiv.org/abs/2505.03804)
 
-[arXiv'26] [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](https://arxiv.org/abs/2506.13329)
+[arXiv'25.6] [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](https://arxiv.org/abs/2506.13329)
 
-[arXiv'26] [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference (DynaExq)](https://arxiv.org/abs/2511.15015)
+[arXiv'25.11] [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference (DynaExq)](https://arxiv.org/abs/2511.15015)
 
 [arXiv'25] [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](https://arxiv.org/abs/2504.02658)
+
+[arXiv'25.8] [MoQE: Improve Quantization Model performance via Mixture of Quantization Experts](https://arxiv.org/abs/2508.09204)
+
+[arXiv'25.11] [Uncertainty Makes It Stable: Curiosity-Driven Quantized Mixture-of-Experts](https://arxiv.org/abs/2511.11743)
+
+[arXiv'26.1] [ButterflyMoE: Sub-Linear Ternary Experts via Structured Butterfly Orbits](https://arxiv.org/abs/2601.13563)
+
+[arXiv'26.2] [KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models](https://arxiv.org/abs/2602.11184)
+
+[arXiv'26.5] [RQ-MoE: Residual Quantization via Mixture of Experts for Efficient Input-Dependent Vector Compression](https://arxiv.org/abs/2605.14359)
 
 #### Knowledge Distillation
 
@@ -229,6 +267,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 [Arxiv'22] [Parameter-Efficient Mixture-of-Experts Architecture for Pre-trained Language Models](https://arxiv.org/abs/2203.01104) [[Code](https://github.com/RUCAIBox/MPOE)]
 ### Expert Skip/Adaptive Gating
 
+[Arxiv'25.9] [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](https://arxiv.org/abs/2509.21892)
+
 
 
 
@@ -246,6 +286,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [ICCV'23] [AdaMV-MoE: Adaptive Multi-Task Vision Mixture-of-Experts](https://ieeexplore.ieee.org/document/10377734)
 
+[Arxiv'26.2] [MoE-Spec: Expert Budgeting for Efficient Speculative Decoding](https://arxiv.org/abs/2602.16052)
+
 ### Merge Expert
 
 [Arxiv'24.10] [Retraining-Free Merging of Sparse Mixture-of-Experts via Hierarchical Clustering](https://arxiv.org/abs/2410.08589)
@@ -261,6 +303,16 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 [Arxiv'24.5] [Learning More Generalized Experts by Merging Experts in Mixture-of-Experts](https://arxiv.org/abs/2405.11530)
 
 [Arxiv'24.9] [DA-MoE: Towards Dynamic Expert Allocation for Mixture-of-Experts Models](https://arxiv.org/abs/2409.06669)
+
+[Arxiv'25.6] [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](https://arxiv.org/abs/2506.23266)
+
+[Arxiv'25.9] [Faster, Smaller, and Smarter: Task-Aware Expert Merging for Online MoE Inference](https://arxiv.org/abs/2509.19781)
+
+[Arxiv'25.9] [FURINA: Free from Unmergeable Router via lINear Aggregation of mixed experts](https://arxiv.org/abs/2509.14900)
+
+[Arxiv'26.4] [Train Separately, Merge Together: Modular Post-Training with Mixture-of-Experts](https://arxiv.org/abs/2604.18473)
+
+[Arxiv'26.8] [UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models](https://arxiv.org/abs/2608.08627)
 
 ### Sparse to Dense
 
@@ -279,6 +331,8 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [Arxiv'21] [Efficient Large Scale Language Modeling with Mixtures of Experts](https://arxiv.org/pdf/2112.10684)
 
+[Arxiv'26.5] [Pruning and Distilling Mixture-of-Experts into Dense Language Models](https://arxiv.org/abs/2605.28207) [Pruning]
+
 
 
 
@@ -287,6 +341,22 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 ### Expert Parallel
 
 [Arxiv'25.1] [Optimizing Distributed Deployment of Mixture-of-Experts Model Inference in Serverless Computing](https://arxiv.org/abs/2501.05313)
+
+[Arxiv'25.3] [Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts](https://arxiv.org/abs/2503.05066)
+
+[Arxiv'25.5] [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](https://arxiv.org/abs/2505.17639)
+
+[Arxiv'25.9] [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](https://arxiv.org/abs/2509.07379)
+
+[Arxiv'25.9] [GRACE-MoE: Grouping and Replication with Locality-Aware Routing for Efficient Distributed MoE Inference](https://arxiv.org/abs/2509.25041)
+
+[Arxiv'26.3] [MoEless: Efficient MoE LLM Serving via Serverless Computing](https://arxiv.org/abs/2603.06350)
+
+[Arxiv'26.5] [GEM: GPU-Variability-Aware Expert-to-GPU Mapping For Mixture-of-Experts Models](https://arxiv.org/abs/2605.19945)
+
+[Arxiv'26.7] [StateFlow: Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge–Cloud Networks](https://arxiv.org/abs/2607.02522)
+
+[Arxiv'26.3] [Scalable Training of Mixture-of-Experts Models with Megatron Core](https://arxiv.org/abs/2603.07685) [Training]
 
 
 [ASPLOS'25] [FSMoE: A Flexible and Scalable Training System for Sparse Mixture-of-Experts Models](https://shaohuais.github.io/publications/index.html)
@@ -390,7 +460,22 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 
 ### Expert Offloading
+
+[Arxiv'26.4] [FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving](https://arxiv.org/abs/2604.02715)
+
+[IJCAI'26] [DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading](https://www.ijcai.org/proceedings/2026/657)
+
+[Arxiv'26.9] [BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices](https://arxiv.org/abs/2609.14643) [Speculative Decoding]
+
+[Arxiv'26.9] [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](https://arxiv.org/abs/2609.18063) [Edge0]
+
 [Arxiv'25.02] [Accurate Expert Predictions in MoE Inference via Cross-Layer Gate](https://arxiv.org/abs/2502.12224v1)
+
+[Arxiv'25.8] [Enabling MoE on the Edge via Importance-Driven Expert Scheduling](https://arxiv.org/abs/2508.18983)
+
+[Arxiv'25.12] [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](https://arxiv.org/abs/2512.03927)
+
+[Arxiv'26.2] [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](https://arxiv.org/abs/2602.03495)
 
 [Arxiv'25.02] [fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving](https://www.arxiv.org/abs/2502.05370)
 
@@ -407,8 +492,6 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 [Arxiv'24.11] [Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts](https://arxiv.org/abs/2404.05019)
 
 
-[Arxiv'24.11] [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](https://arxiv.org/abs/2411.11217)
-
 [Arxiv'24.11] [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](https://arxiv.org/abs/2411.01433) [Quantization, Skip Expert]
 
 [Arxiv'24.10] [ExpertFlow: Optimized Expert Activation and Token Allocation for Efficient Mixture-of-Experts Inference](https://arxiv.org/abs/2410.17954)
@@ -416,15 +499,13 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 [Arxiv'24.8] [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](https://arxiv.org/abs/2408.10284) [[Code](https://github.com/PKU-SEC-Lab/AdapMoE)] [Adaptive Gating]
 
 
-[Arxiv'24.9] [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](https://arxiv.org/abs/2407.14417)
-
 [MLSys'24.5] [SiDA: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](https://proceedings.mlsys.org/paper_files/paper/2024/hash/698cfaf72a208aef2e78bcac55b74328-Abstract-Conference.html) [[Code](https://github.com/timlee0212/SiDA-MoE)]
 
 [Arxiv'24.8] [MoE-Infinity: Offloading-Efficient MoE Model Serving](https://arxiv.org/abs/2401.14361) [[Code](https://github.com/TorchMoE/MoE-Infinity)]
 
 [Arxiv'24.2] [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](https://arxiv.org/abs/2402.07033) [[Code](https://github.com/efeslab/fiddler)]
 
-[Arxiv'24.9] [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](https://arxiv.org/abs/2407.14417)
+[Arxiv'24.7] [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](https://arxiv.org/abs/2407.14417)
 
 [Electronics'24.5] [Efficient Inference Offloading for Mixture-of-Experts Large Language Models in Internet of Medical Things](https://www.mdpi.com/2079-9292/13/11/2077)
 
@@ -451,6 +532,12 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 
 [SoCC '24.11] [MoEsaic: Shared Mixture of Experts](https://dl.acm.org/doi/10.1145/3698038.3698521)
 
+[Arxiv'25.8] [MoE-Inference-Bench: Performance Evaluation of Mixture of Expert Large Language and Vision Models](https://arxiv.org/abs/2508.17467)
+
+[Arxiv'26.8] [TreeWY: Speculative Verification for Gated DeltaNet Hybrids](https://arxiv.org/abs/2608.20961)
+
+[OpenReview'26] [The Expert Strikes Back: Interpreting Mixture-of-Experts Language Models at Expert Level](https://openreview.net/forum?id=npMOaMWWrW) [Interpretability]
+
 
 
 
@@ -467,6 +554,14 @@ A curated list of awesome papers about optimizing the inference of MoE-based LLM
 [ICCAD'23] [Edge-MoE: Memory-Efficient Multi-Task Vision Transformer Architecture with Task-Level Sparsity via Mixture-of-Experts](https://ieeexplore.ieee.org/abstract/document/10323651) [[Code](https://github.com/sharc-lab/Edge-MoE)]
 
 [NeurIPS'22] [M³ViT: Mixture-of-Experts Vision Transformer for Efficient Multi-task Learning with Model-Accelerator Co-design](https://proceedings.neurips.cc/paper_files/paper/2022/file/b653f34d576d1790481e3797cb740214-Paper-Conference.pdf) [[Code](https://github.com/VITA-Group/M3ViT)]
+
+[Arxiv'26.7] [ThAME: 3D Memory-Enabled Heterogeneous Accelerator for LLM Mixture of Experts](https://arxiv.org/abs/2607.17074)
+
+[Arxiv'26.8] [MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture](https://arxiv.org/abs/2608.13962)
+
+[IEEE TSI'26] [MoE-Sched: Enabling Efficient FPGA Deployment of Mixture-of-Experts Vision Transformers via Coordinated Scheduling](https://www.computer.org/csdl/journal/si/2026/01/11153520/29Qzi35ZriM)
+
+[TCAD'26] [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](https://www.semanticscholar.org/paper/HDA-MoE%3A-Hybrid-Parallelism-and-Dynamic%2C-Adaptive-Huang-Zhong/bf65a89d2d3209f3e6bbdd39311206d77baf9ab8)
 
 
 ## Citation
